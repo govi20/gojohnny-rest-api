@@ -15,3 +15,12 @@ matrix:
 # Java 10 "OpenJDK"
     - env: JDK='OpenJDK 10'
       install: . ./install-jdk.sh -F 10 -L GPL
+
+# Heroku deployment
+deploy:
+  provider: heroku
+  api_key:
+    secure: REaM+Y/m8yRwIUYSU61eHNvA2c2GyRO69/s7w1lOZVvLibNMoCuBqSTrwLLFsnSuH+eIZrxMJXBD7rtRYvh0iw7c2d6PH4z03FwOzRAhV8G7mFXD6gADGgPx7skrfTWQ9NsFGDs2twiFQP37shbKnPwwz38WUwdvwKKO0RBjSzILWlpKwEyfzWzCUUKksCnGDswEGuDFGEX6LJT7NrJznzHjkgE8crFJ17OAexZRDT0Pi2+nYWvceUV3I4RJFc0ayEvAPnMMalKb5w2arD3CLJHyJSxEIpM4e5TDQTFn4f2CLrYdjI6ugGOaCUjIHRoDzwWCs4hRCVV3l+FMFc2YAXWzIsxjdzDfDlEpyzPSIa6/o131rGycb+X+DAhQwRMLMbBBRyOLeX4j9UTxjDLeDb24LxXBh3X3Q6NgxmUp67cBDhnlzk6yR6e2R986wBerUZifwixynytKhXAqQ52ToGYcZYdn9osZ2o8o1eMgPnfwq7v5BzVsKzjRI/J5JGVK2hkhTxr1Iebe0tyP9FxZduCcycvPEFwIz658lsBOIsT9c6PyVuanDJho8abBvDnZbqFwMwU7tal60pSiJuFMw7jsildUijPpF+5156c/Kw3ub5eQMIgE7PyqjOcPHKrffyGiAgjSzUaNvfOO59US5VRqGYY89vFqPhyPyaHLQvw=
+  app: gojohnny-rest-api
+  on:
+    repo: bobocode-labs/gojohnny-rest-api
