@@ -13,8 +13,8 @@ matrix:
     - env: JDK='Oracle JDK 10'
       install: . ./install-jdk.sh -F 10 -L BCL
 # Java 10 "OpenJDK"
-    - env: JDK='OpenJDK 10'
-      install: . ./install-jdk.sh -F 10 -L GPL
+#    - env: JDK='OpenJDK 10'
+#      install: . ./install-jdk.sh -F 10 -L GPL
 
 # Heroku deployment
 deploy:
