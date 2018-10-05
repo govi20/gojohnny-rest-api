@@ -1,13 +1,25 @@
 spring:
+  profiles:
+    active: 'prod'
+  jpa:
+    properties:
+      hibernate:
+        jdbc: {lob: {non_contextual_creation: true}}
+    database-platform: 'org.hibernate.spatial.dialect.postgis.PostgisDialect'
+    generate-ddl: true
+  flyway:
+    enabled: false
+---
+spring:
+  profiles: 'dev'
+  datasource:
+    url: 'jdbc:postgresql://localhost:5432/gojohnny_db'
+    username: 'postgres'
+    password: 'postgres'
+---
+spring:
+  profiles: 'prod'
   datasource:
     url: ${JDBC_DATABASE_URL}
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
-  jpa:
-    properties:
-      hibernate:
-        hbm2ddl: {auto: 'create-drop'}
-        jdbc: {lob: {non_contextual_creation: true}}
-    database-platform: 'org.hibernate.spatial.dialect.postgis.PostgisDialect'
-  flyway:
-    enabled: false
