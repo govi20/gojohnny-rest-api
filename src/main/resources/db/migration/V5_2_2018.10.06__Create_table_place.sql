@@ -6,5 +6,3 @@ CREATE TABLE IF NOT EXISTS place (
 
  CONSTRAINT place_pk PRIMARY KEY (id)
 );
-
-CREATE INDEX place_id_idx ON place (id);
