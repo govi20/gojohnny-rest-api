@@ -14,5 +14,5 @@ public interface PlaceRepository extends JpaRepository<Place, Long> {
 
     @RestResource(path = "/name")
     @Query("select p from Place p where p.name like concat('%', :query, '%')")
-    List<Place> findPlacesByName(@Param("query") String query);
+    List<Place> searchByName(@Param("query") String query);
 }
