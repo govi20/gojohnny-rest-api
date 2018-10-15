@@ -29,5 +29,6 @@ public class Place {
     @Column(nullable = false)
     private Point location;
 
-
+    @Column
+    private String photoUrl;
 }
