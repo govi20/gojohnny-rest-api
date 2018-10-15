@@ -24,10 +24,12 @@ public class Place {
     private String name;
 
     @Column
+    private String description;
+
+    @Column
     private BigDecimal altitude;
 
     @Column(nullable = false)
     private Point location;
-
 
 }
