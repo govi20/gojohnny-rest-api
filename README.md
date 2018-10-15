@@ -26,5 +26,8 @@ spring:
    
    **Pay attention to double underscores before name!**
    
-   For example, we have ticket 25, and previous script number is 5, so we create:
-   V25_6_2018.10.25__Make_something.sql
+   Script number is number of script for that ticket, starting from 1.
+   
+   For example, we are creating first migation script for ticket 25:
+   V25_1_2018.10.25__Make_something.sql
+  
