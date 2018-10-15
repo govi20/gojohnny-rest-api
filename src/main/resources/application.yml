@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: 'prod'
+    active: 'dev'
   jpa:
     properties:
       hibernate:
@@ -22,3 +22,11 @@ spring:
     url: ${JDBC_DATABASE_URL}
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
+---
+spring:
+  profiles: 'testing'
+  jpa:
+    generate-ddl: true
+    database-platform: 'H2'
+  flyway:
+    enabled: false
