@@ -50,6 +50,6 @@ spring:
    
    Script number is number of script for that ticket, starting from 1.
    
-   For example, we are creating first migation script for ticket 25:
+   For example, we are creating first migration script for ticket 25:
    V25_1_2018.10.25__Make_something.sql
   
