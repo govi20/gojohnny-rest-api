@@ -1,0 +1,1 @@
+ALTER TABLE place ADD COLUMN osm_id BIGINT;
