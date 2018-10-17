@@ -11,8 +11,14 @@ import java.util.List;
 
 @RepositoryRestResource
 public interface PlaceRepository extends JpaRepository<Place, Long> {
-
     @RestResource(path = "/name")
     @Query("select p from Place p where p.name like concat('%', :query, '%')")
     List<Place> searchByName(@Param("query") String query);
+
+    @RestResource(path = "/bounds")
+    @Query("select p from Place p where st_y(p.location) >= :minLat and st_y(p.location) <= :maxLat and st_x(p.location) >= :minLng and st_x(p.location) <= :maxLng")
+    List<Place> searchByBounds(@Param("minLat") double minLat, @Param("minLng") double minLng,
+                               @Param("maxLat") double maxLat, @Param("maxLng") double maxLng);
 }
+
+
