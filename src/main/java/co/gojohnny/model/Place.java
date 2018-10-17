@@ -1,5 +1,6 @@
 package co.gojohnny.model;
 
+import co.gojohnny.enums.PlaceType;
 import com.vividsolutions.jts.geom.Point;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,6 +26,9 @@ public class Place {
 
     @Column
     private BigDecimal altitude;
+
+    @Column
+    private PlaceType type = PlaceType.UNKNOWN;
 
     @Column(nullable = false)
     private Point location;
