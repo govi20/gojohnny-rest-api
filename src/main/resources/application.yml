@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: 'dev'
+    active: 'prod'
   jpa:
     properties:
       hibernate:
@@ -11,7 +11,7 @@ spring:
 
 ---
 spring:
-  profiles: 'dev'
+  profiles: 'prod'
   datasource:
     url: 'jdbc:postgresql://localhost:5432/gojohnny_db'
     username: 'postgres'
