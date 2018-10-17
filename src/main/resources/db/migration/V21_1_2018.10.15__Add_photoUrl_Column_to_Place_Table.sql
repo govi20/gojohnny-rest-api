@@ -1,1 +1,1 @@
-alter table place add column photoUrl varchar (255);
+ALTER TABLE place ADD COLUMN photo_url varchar (255);
