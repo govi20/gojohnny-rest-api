@@ -37,9 +37,19 @@ spring:
     username: 'postgres'
     password: 'postgres'
 ```
-* **don't commit any locan changes** from [application.yml](https://github.com/bobocode-labs/gojohnny-rest-api/blob/master/src/main/resources/application.yml)
-* if you are running project for first time (using empty database), you should **chage flyway configuration**:
+* **don't commit any local changes** from [application.yml](https://github.com/bobocode-labs/gojohnny-rest-api/blob/master/src/main/resources/application.yml)
+* if you are running project for first time (using empty database), you should **change flyway configuration**:
 ```
   flyway:
     baseline-on-migrate: true
 ```
+* If you are creating flyway migration scripts, you should use next naming convention:
+   `V{TICKET_NUMBER}_{SCRIPT_NUMBER}_DATE__Name_of_script.sql`
+   
+   **Pay attention to double underscores before name!**
+   
+   Script number is number of script for that ticket, starting from 1.
+   
+   For example, we are creating first migration script for ticket 25:
+   V25_1_2018.10.25__Make_something.sql
+  
