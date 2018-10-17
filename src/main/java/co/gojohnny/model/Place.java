@@ -31,4 +31,7 @@ public class Place {
 
     @Column(name = "photo_url")
     private String photoUrl;
+
+    @Column(name = "osm_id")
+    private Long osmId;
 }
