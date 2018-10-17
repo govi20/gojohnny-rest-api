@@ -11,7 +11,7 @@ spring:
 
 ---
 spring:
-  profiles: 'prod'
+  profiles: 'dev'
   datasource:
     url: 'jdbc:postgresql://localhost:5432/gojohnny_db'
     username: 'postgres'
