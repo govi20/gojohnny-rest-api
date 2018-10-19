@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS place (
  altitude DECIMAL,
  location GEOMETRY NOT NULL,
  description VARCHAR (255),
- photo_url varchar (255),
+ photo_url VARCHAR (255),
  osm_id BIGINT,
 
  CONSTRAINT place_pk PRIMARY KEY (id)
