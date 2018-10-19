@@ -44,12 +44,10 @@ spring:
     baseline-on-migrate: true
 ```
 * If you are creating flyway migration scripts, you should use next naming convention:
-   `V{TICKET_NUMBER}_{SCRIPT_NUMBER}_DATE__Name_of_script.sql`
+   `V{MAJOR_VERSION}.{MINOR_VERSION}__Name_of_script.sql`
    
    **Pay attention to double underscores before name!**
    
-   Script number is number of script for that ticket, starting from 1.
-   
-   For example, we are creating first migration script for ticket 25:
-   V25_1_2018.10.25__Make_something.sql
+   For example, we are creating a migration script and current version is `1.8`:
+   `V1.9__Add_photo_url_to_place.sql`
   

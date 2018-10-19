@@ -1,1 +1,0 @@
-ALTER TABLE place ADD COLUMN photo_url varchar (255);
